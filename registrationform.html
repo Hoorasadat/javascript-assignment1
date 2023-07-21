@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="registrationform.css">
+    <title>Western Columbia Grocers Registration Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- sssss -->
+    <form id="myform" onsubmit="processData(); return false;">
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" pattern="[a-zA-Z]+( [a-zA-Z]+)*"
+      oninvalid="this.setCustomValidity('Please enter a valid full name with letters only!')"
+      oninput="this.setCustomValidity('')"
+      >
+
+      <label for="address">Address:</label>
+      <input type="text" id="address"  >
+
+      <label for="postalcode">Postal Code:</label>
+      <input type="text" id="postalcode"
+        pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d"
+        placeholder="T5H 4H4"
+        oninvalid="this.setCustomValidity('Please enter a valid Canadian postal code like \'T5H 4H4\'!')"
+        oninput="this.setCustomValidity('')"
+      >
+
+      <label for="telephone">Telephone Number:</label>
+      <input type="tel" id="telephone"
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+      placeholder="403-123-4567"
+      oninvalid="this.setCustomValidity('Please enter a valid phone number like \'403-324-2344\'!')"
+      oninput="this.setCustomValidity('')"
+      >
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        placeholder="example@example.net" required
+      >
+
+      <label for="pickupdate">Pickup Date:</label>
+      <input type="date" id="pickupdate" required>
+
+      <div class="buttons">
+        <input class="button" type="reset" value="Reset">
+        <input class="button" type="submit" value="Submit">
+      </div>
+
+    </form>
+  </div>
+
+  <script src="registrationform.js"></script>
+</body>
+
+</html>
+
+
+</body>
+</html>
